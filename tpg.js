@@ -32,11 +32,9 @@ Module.register('tpg', {
     this.result = false
     this.url = this.config.api.base + this.config.api.method + '?' + $.param(this.config.params)
     this.getData()
-    console.log(this)
-/*
     setInterval(() => {
         this.getData();
-    }, this.config.api.updateInterval)*/
+    }, this.config.updateInterval)
   },
   // Override dom generator.
   getDom: function () {
