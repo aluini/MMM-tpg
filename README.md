@@ -1,12 +1,8 @@
 # MMM-tpg
 
-MagicMirror² module - TPG (Transport publics Genevois) station monitor
+MagicMirror² module - TPG (Transport Publics Genevois) station monitor
 
-This module is an extension of [MagicMirror
-
-<sup>2</sup>](https://github.com/MichMich/MagicMirror)
-
- project by [MichMich](https://github.com/MichMich/)
+This module is an extension of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror) project by [MichMich](https://github.com/MichMich/)
 
 ## Screenshots
 
@@ -18,9 +14,7 @@ v1.0.0
 
 ## Prerequisite
 
-A working installation of [MagicMirror
-
-<sup>2</sup>](https://github.com/MichMich/MagicMirror)
+A working installation of [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
 
 ## Installation
 
@@ -37,6 +31,7 @@ Sample minimum configuration entry for your `~/MagicMirror/config/config.js`:
 {
     module: 'tpg',
     position: 'top_left',
+    header: 'TPG - NAMEOFTHESTOP',
     config: {
       params: {
         stopCode: '',            // Which stop would you like to have displayed?            
@@ -56,6 +51,7 @@ Sample configuration entry for your `~/MagicMirror/config/config.js` with option
 {
     module: 'tpg',
     position: 'top_left',
+    header: 'TPG - NAMEOFTHESTOP',
     config: {
       params: {
         stopCode: '',            // Which stop would you like to have displayed?            
