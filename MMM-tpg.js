@@ -31,8 +31,6 @@ Module.register('MMM-tpg', {
   renderError: function (reason) {
     console.log('error ' + reason)
   },
-
-
   getScripts: function () {
     return [this.file('js/jquery.js')]
   },
@@ -80,7 +78,11 @@ Module.register('MMM-tpg', {
   },
   // get header
   getHeader: function() {
-      return this.data.header + ' - ' + this.result.stop.stopName ;
+    var stopname = ''
+    if(this.result) {
+      stopname = ' - ' + this.result.stop.stopName
+    }
+    return this.data.header + stopname ;
   },
   // get data
   getData: function () {
