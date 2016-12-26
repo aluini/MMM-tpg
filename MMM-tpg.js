@@ -58,18 +58,14 @@ Module.register('MMM-tpg', {
         if (i < maxDeparture) {
           var departure_row = document.createElement('tr')
 
-          var departure_vehiculType = document.createElement('td')
-          var vehiculType = document.createElement('i')
-          vehiculType.classList.add('fa', departure.vehiculeType === 'AB' || departure.vehiculeType === 'ABA' ? 'fa-bus' : 'fa-subway')
-
           var departure_name = document.createElement('td')
           departure_name.innerHTML = departure.line.lineCode + ' ' + departure.line.destinationName
           departure_row.appendChild(departure_name)
 
           var departure_time = document.createElement('td')
           departure_time.classList.add('centered')
-          departure_time.innerHTML = departure.waitingTime
-          departure_row.appendChild((departure_time<=0 ? vehiculType : departure_time))
+          departure_time.innerHTML = ( departure.waitingTime <= 0 ? '<i class="fa ' + (departure.vehiculeType === 'AB' || departure.vehiculeType === 'ABA' ? 'fa-bus' : 'fa-subway') + '">' : departure.waitingTime)
+          departure_row.appendChild(departure_time)
 
           if (departure.waitingTime !== 'no more') {
             table.appendChild(departure_row)
